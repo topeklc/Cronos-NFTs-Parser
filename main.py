@@ -63,5 +63,4 @@ def main(pages):
         )
         writer.writerow(nfts_data)
 
-
 main(pages)
