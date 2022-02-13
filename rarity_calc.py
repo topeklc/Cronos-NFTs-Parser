@@ -32,23 +32,23 @@ banned = ["ID", "image"]
 def calculate_percent_of_occurrence():
     """Calculates the percentage of occurrence of a specific trait"""
     # make empty list in counter_dict value
-    for dic in my_lst:
-        for trait in dic:
+    for nft in my_lst:
+        for trait in nft:
             if trait not in banned:
                 counter_dict[trait] = []
     # append list in counter_dict values by specific trait dictionary and set value to 0
-    for dct in my_lst:
-        for x in dct:
-            if x not in banned:
-                if {dct[x]: 0} not in counter_dict[x]:
-                    counter_dict[x].append({dct[x]: 0})
+    for nft in my_lst:
+        for trait in nft:
+            if trait not in banned:
+                if {nft[trait]: 0} not in counter_dict[trait]:
+                    counter_dict[trait].append({nft[trait]: 0})
     # increment specific trait dictionary in counter_dict if occurs
-    for dct in my_lst:
+    for nft in my_lst:
         for i in counter_dict:
             if i not in banned:
                 for x in counter_dict[i]:
                     a = next(iter(x))
-                    if a in list(dct.values()):
+                    if a in list(nft.values()):
                         x[a] += 1
     # set values percent_traits_dict
     for i in counter_dict:

@@ -62,6 +62,11 @@ def get_data(page: int) -> dict:
             dic[trait_lst[i + 1][1].strip()] = attr[2].strip()
         elif i % 2 == 0:
             dic[trait_lst[i + 1][1].replace("]", "").strip()] = trait_lst[i][1].strip()
+    traits = 0
+    for trait in list(dic)[2:]:
+        if dic[trait].lower() != 'none':
+            traits += 1
+    dic['Traits'] = traits
     return dic
 
 
