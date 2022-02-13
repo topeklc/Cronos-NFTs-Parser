@@ -4,8 +4,8 @@ import html
 import csv
 from time import sleep
 
-CONTRACT_ADDRESS = "0x89dBC8Bd9a6037Cbd6EC66C4bF4189c9747B1C56"
-PAGES = 5
+CONTRACT_ADDRESS = "0x7D5f8F9560103E1ad958A6Ca43d49F954055340a"
+PAGES = 2500
 
 
 def get_trait_lst(lst: list) -> list:
